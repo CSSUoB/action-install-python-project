@@ -1,0 +1,29 @@
+# Logs
+logs
+*.log
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# dot-env environment variables file
+.env
+.env.test
+
+# Other possible cache files
+.cache
+.cache/
+
+# VSCode settings
+.vscode
+
+# JetBrains IDE settings
+.idea
+
+# Local files
+local/
