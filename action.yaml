@@ -18,7 +18,7 @@ runs:
         python-version: ${{ inputs.python-version }}
 
     - name: Install Poetry
-      uses: CSSUoB/action-install-poetry@v1.0.0
+      uses: CSSUoB/action-install-poetry@v1.1.0
       with:
         virtualenvs-create: true
         virtualenvs-in-project: true
