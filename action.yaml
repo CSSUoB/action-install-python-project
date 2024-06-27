@@ -5,6 +5,10 @@ inputs:
     # noinspection SpellCheckingInspection
     description: "Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset."
     required: true
+  directory:
+    description: "The working directory for the Poetry command (defaults to the current working directory)."
+    required: false
+    default: "."
 runs:
   using: "composite"
   steps:
@@ -34,5 +38,5 @@ runs:
 
     - name: Install dependencies
       if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-      run: poetry install --no-interaction --no-root
+      run: poetry install --no-interaction --no-root -C ${{ inputs.directory }}
       shell: bash
